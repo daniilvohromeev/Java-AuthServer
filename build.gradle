@@ -35,6 +35,16 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 }
 
+apply plugin: 'java'
+apply plugin: 'idea'
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
